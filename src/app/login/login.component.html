@@ -1,0 +1,20 @@
+
+<h4 class="ms-2 p-2 mt-5">{{data}}</h4>
+<div class="container rounded w-50 p-5 mt-5 text-center" style="background-color: rgba(0, 0, 0, 0.199);">
+    <h1>Sign In To Your Bank</h1>
+    <form action="">
+        <div>
+            <input (change)="acnoChange($event)" id="acid" name="acnum1" type="text" [placeholder]="inputplacsholder" class="mt-4 form-control">
+        </div>
+        <div>
+            <input (change)="psdChange($event)" id="psw1" name="paswrd" type="password" placeholder="enter password" class="mt-4 form-control">
+        </div>
+        <div>
+            <button (click)="login()" type="button" class="btn btn-outline-light mt-4">login</button>
+        </div>
+    </form>
+    
+    
+    
+    
+</div>

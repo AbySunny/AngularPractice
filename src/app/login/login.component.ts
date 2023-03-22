@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent  implements OnInit{
 
-  data="your perfect banking partner"
+  data="Your Perfect Banking Partner"
   inputplacsholder="Account Number"
-  acno=''
-  // or acno:any
-  psw=''
+  // acno=''
+  // // or acno:any
+  // psw=''
 
   userDetails:any={
     1000:{acno:1000,username:"anu",password:"abc123",balance:"0"},
@@ -26,19 +26,54 @@ export class LoginComponent  implements OnInit{
     
   }
 
-  login(){
-    alert('login clicked')
+  // login(){
+  //   var acnum=this.acno
+  //   var psw=this.psw
+  //   var userDetails1=this.userDetails
+  //   if(acnum in userDetails1){
+  //     if(psw==userDetails1[acnum]["password"]){
+  //       alert("login success")
+  //     }
+  //     else{
+  //       alert("incorrect password")
+  //     }
+  //   }
+  //   else{
+  //     alert('acno incorrect or not registered yet')
+  //   }
+  // }
+
+
+  login(a:any,b:any){
+
+    var acnum=a.value
+    var psw=b.value
+    var userDetails1=this.userDetails
+    if(acnum in userDetails1){
+      if(psw==userDetails1[acnum]["password"]){
+        alert("login success")
+      }
+      else{
+        alert("incorrect password")
+      }
+    }
+    else{
+      alert('acno incorrect or not registered yet')
+    }
   }
-  acnoChange(event:any){
-    this.acno=event.target.value
-    console.log(this.acno);
+
+
+
+  // acnoChange(event:any){
+  //   this.acno=event.target.value
+  //   // console.log(this.acno);
     
 
-  }
-  psdChange(event:any){
-    this.psw=event.target.value
-    console.log(this.psw);
+  // }
+  // psdChange(event:any){
+  //   this.psw=event.target.value
+  //   // console.log(this.psw);
     
-  }
+  // }
 
 }

@@ -4,17 +4,20 @@
     <h1>Sign In To Your Bank</h1>
     <form action="">
         <div>
-            <input #acno id="acid" name="acnum1" type="text" [placeholder]="inputplacsholder" class="mt-4 form-control">
+            <input [(ngModel)]="acno" id="acid" name="acnum1" type="text" [placeholder]="inputplacsholder" class="mt-4 form-control">
         </div>
         <div>
-            <input #psw id="psw1" name="paswrd" type="password" placeholder="enter password" class="mt-4 form-control">
+            <input [(ngModel)]="psw"  id="psw1" name="paswrd" type="password" placeholder="enter password" class="mt-4 form-control">
         </div>
         <div>
-            <button (click)="login(acno,psw)" type="button" class="btn btn-outline-light mt-4">login</button>
+            <button (click)="login()" type="button" class="btn btn-outline-light mt-4">login</button>
         </div>
-    </form>
-    
-    
+
+        <div class="text-center text-white"> 
+             <strong>Not Registered ? </strong>                                         <!-- remove href and use routerLink  -->
+            <a style="text-decoration: none; color: rgba(230, 230, 10, 0.776);" routerLink="register">Register</a>
+        </div>
+    </form> 
     
     
 </div>

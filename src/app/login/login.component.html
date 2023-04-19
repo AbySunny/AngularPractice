@@ -1,21 +1,21 @@
 
 <h4 class="ms-2 p-2 mt-5">{{data}}</h4>
-<div class="container rounded w-50 p-5 mt-5 text-center" style="background-color: rgba(0, 0, 0, 0.199);">
+<div class="container rounded w-50 p-5 mt-5 text-center" style="background-color: rgba(75, 62, 62, 0.338);">
     <h1>Sign In To Your Bank</h1>
-    <form action="">
+    <form [formGroup]="loginForm" action="" (ngSubmit)="login()">
         <div>
-            <input [(ngModel)]="acno" id="acid" name="acnum1" type="text" [placeholder]="inputplacsholder" class="mt-4 form-control">
+            <input formControlName="acno" id="acid" name="acnum1" type="text" [placeholder]="inputplacsholder" class="mt-4 form-control">
         </div>
         <div>
-            <input [(ngModel)]="psw"  id="psw1" name="paswrd" type="password" placeholder="enter password" class="mt-4 form-control">
+            <input formControlName="psw" id="psw1" name="paswrd" type="password" placeholder="enter password" class="mt-4 form-control">
         </div>
         <div>
-            <button (click)="login()" type="button" class="btn btn-outline-light mt-4">login</button>
+            <button  type="submit" class="btn btn-outline-danger my-4">login</button>
         </div>
 
         <div class="text-center text-white"> 
-             <strong>Not Registered ? </strong>                                         <!-- remove href and use routerLink  -->
-            <a style="text-decoration: none; color: rgba(230, 230, 10, 0.776);" routerLink="register">Register</a>
+             <strong style="color: rgb(255, 217, 0);">Not Registered ? </strong>                                         <!-- remove href and use routerLink  -->
+            <a style="text-decoration: none; color: rgb(42, 253, 0);" routerLink="register">Register</a>
         </div>
     </form> 
     

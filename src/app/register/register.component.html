@@ -1,18 +1,29 @@
 
 <div class="container rounded w-50 p-5 mt-5 text-center" style="background-color: rgba(0, 0, 0, 0.199);">
     <h1>Sign Up To Your Bank</h1>
-    <form action="">
+    <form [formGroup]="registerForm" action="" (ngSubmit)="register()">
         <div>
-            <input  id="unamid" name="usern1" type="text" placeholder="Enter Username" class="mt-4 form-control">
+            <input formControlName="uname" id="unamid" name="usern1" type="text" placeholder="Enter Username" class="mt-4 form-control">
+        </div>
+        <div *ngIf="this.registerForm.get('uname')?.errors  && this.registerForm.get('uname')?.touched">
+            <p class="text-danger">enter a valid input contain characters</p>
+        </div>
+
+        <div>
+            <input formControlName="acno" id="acid" name="acnum1" type="text" placeholder="Enter acnum" class="mt-4 form-control">
+        </div>
+        <div *ngIf="this.registerForm.get('acno')?.errors  && this.registerForm.get('acno')?.touched">
+            <p class="text-danger">enter a valid input contain numbers</p>
+        </div>
+
+        <div>
+            <input formControlName="psw" id="psw1" name="paswrd" type="password" placeholder="enter password" class="mt-4 form-control">
+        </div>
+        <div *ngIf="this.registerForm.get('psw')?.errors  && this.registerForm.get('psw')?.touched">
+            <p class="text-danger">enter a valid input contain only numbers and characters</p>
         </div>
         <div>
-            <input  id="acid" name="acnum1" type="text" placeholder="Enter acnum" class="mt-4 form-control">
-        </div>
-        <div>
-            <input   id="psw1" name="paswrd" type="password" placeholder="enter password" class="mt-4 form-control">
-        </div>
-        <div>
-            <button (click)="register()"  type="button" class="btn btn-outline-warning mt-4">Register</button>
+            <button  type="submit" class="btn btn-outline-warning mt-4">Register</button>
         </div>
 
         

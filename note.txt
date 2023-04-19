@@ -10,6 +10,9 @@ clear errors/warnings
 project running
     ng serve --open
 
+create new component
+    ng g c component_name
+
 
 
 life cycle of angular component
@@ -69,3 +72,90 @@ to store redentent datas and methodes
 -all the components can access the datas and methodes defined in service file easily
 
         -ng g s service_name
+
+
+
+Angular Dierectives - to manipulate DOM
+---------------------
+
+1. component dierectives
+2. structural dierectives    *ngFor  *ngIf
+3. atribute dierectives   [ngClass]
+
+
+
+validation in Angular
+---------------------
+
+form creation in angular
+
+    1. template driven form
+    2. model driven form
+
+        2.1 reactive form - used to create model of form
+         reactive form contain -group,array,control
+
+            -ReactiveFormsModule  - module
+            -FormBuilder          - class used to create model form
+            -group()              - method to create model
+
+Local Storage In Angular
+------------------------
+localStorage.getItem()
+localStorage.setItem()
+localStorage.removeItem()
+
+json - stringify   parse
+
+
+Parent child components communication
+-------------------------------------
+
+@Input()   parent to child data sharing
+@Output()  child to parent data sharing
+
+
+Event creation in Angular
+------------------------
+
+we can create our own events in angular projects
+
+EventEmitter - class used to create userdefined events
+                eventname=new EventEmitter()
+                emit() - to define the working time/to start the event
+
+
+
+Date and Time in Angular
+-------------------------
+class - Date
+
+
+Angular Pipes
+---------------
+to convert datas into another format
+
+API Creation in Angular
+---------------------
+HttpClientModule  - module to create web api calls
+
+HttpClient  - class inside the HttpClientModule
+
+folder      file       class      methods
+
+package    modules     class      methods
+
+
+asynchronous code handling in ts
+--------------------------------
+
+js  - promise - resolve  then()
+              - reject   catch()
+
+
+ts  - observable - resolve  subcribe()
+                 - reject   catch()
+
+Header generation for API request
+------------------------------------
+HttpHeaders  - class used to generate headers
